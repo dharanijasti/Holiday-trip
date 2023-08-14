@@ -1,0 +1,45 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: pink;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: red; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-top: 10px;
+}
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px 20px;
+    background-color: blue; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: darkblue; 
+}
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,223 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Holiday Planning</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles5.css">
+    <style>
+
+        .align-center {
+            text-align: center;
+            color: brown; 
+            background-color: lightblue;
+        }
+
+        /* Additional CSS for layout */
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-section {
+            flex: 0 0 200px; /* Fixed width for the left section */
+            padding: 20px;
+        }
+
+        .middle-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .right-section {
+            flex: 0 0 200px; /* Fixed width for the right section */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right-section img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+        <nav class="left-section">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#visiting-places">Visiting Places</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="align-center">
+        <p>Click on the link below to know best food in different places</p>
+        <a href="food.html" target="_blank">Delicious_Cuisine</a>
+        <p>Click on the link below to know best tourism spots in different places</p>
+        <a href="places.html" target="_blank">Tourism_spots</a>
+        <p>Images of holy places in India</p>
+        <a href="https://in.images.search.yahoo.com/search/images;_ylt=Awr1Smu7SNZkGKcV3Tm7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Nj?p=holy+places+in+India+images&fr=mcafee" target="_blank">Temples</a>
+        <p>Images of food that are famous in Different parts of India</p>
+        <a href="https://www.pexels.com/search/indian%20food/" target="_blank">Food_images</a>
+      </div>
+
+    <div class="main-container">
+        <div class="middle-section">
+            <div class="container">
+                <h1>Holiday Planning</h1>
+                <form action="process_form.php" method="POST">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" name="destination" required><br>
+
+                    <label for="days">Number of Days:</label>
+                    <input type="number" id="days" name="days" min="1" required><br>
+
+                    <label for="budget">Budget ($):</label>
+                    <input type="number" id="budget" name="budget" min="1" required><br>
+
+                    <button type="submit">Plan My Holiday</button>
+                </form>
+                <div id="result"></div>
+
+            </div>
+
+            <div class="container" id="home">
+                <h1>Welcome to Holiday Planning</h1>
+                <p>
+                    Are you ready for an unforgettable holiday? Whether you love beaches,
+                    mountains, bustling cities, or exploring historical sites, we have
+                    the perfect holiday plan for you! Use the form below to select your
+                    preferred visiting places, and we'll create a customized itinerary
+                    just for you.
+
+                </p>
+                <p>
+                    Our team of experienced travel experts is here to assist you at every
+                    step of your journey. Get ready to embark on a thrilling adventure and
+                    make memories that will last a lifetime. Start planning your dream
+                    holiday today!
+
+                </p>
+                <p>
+                    a holiday planning website aims to simplify the travel planning process by offering comprehensive information, 
+                    convenient booking options, and a user-friendly experience for travelers to create memorable vacations. 
+                    The specific features and design can vary based on the website's target audience and the travel services it provides.
+
+                </p>
+            </div>
+
+            <div class="container" id="visiting-places">
+                <h1>Visiting Places</h1>
+                <form id="places-form">
+                    <label>
+                        <input type="checkbox" name="place" value="beach">
+                        Beach
+                    </label>
+                    <label>
+                        <input type="checkbox" name="place" value="mountain">
+                        Mountain
+                    </label>
+                    <label>
+                        <input type="checkbox" name="place" value="city">
+                        City
+                    </label>
+                    <label>
+                        <input type="checkbox" name="place" value="historical-site">
+                        Historical Site
+                    </label>
+                    <button type="submit">Submit</button>   
+                </form>
+                <div id="result1"></div>
+            </div>
+
+            <div class="container" id="contact">
+                <h1>Contact</h1>
+                <p> <h4> Email Id: </h4>holiday_planning@gmail.com</p>
+                <p> <h4> Phone no: </h4> 9898989898</p>
+                <p> <h4> Instagram id:</h4> holiday_planning123</p>
+            </div>   
+            <div class="booking-form">
+                <h2>Book Your Trip</h2>
+                <form action="process_booking.php" method="post">
+                  <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="No_of_days">No_of_days :</label>
+                    <input type="text" id="No_of_days" name="No_of_days" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="Destination">Destination:</label>
+                    <input type="text" id="Destination" name="Destination" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="Phn_no">Phn_no:</label>
+                    <input type="text" id="Phn_no" name="Phn_no" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="text" id="date" name="date" required>
+                  </div>
+
+                  <input type="submit" value="Book Now">
+                </form>
+              </div>
+              
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div>
+                <img src="image1.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image7.png" alt="Image 2">
+            </div>
+            <div>
+                <img src="image4.png" alt="Image 3">
+            </div>
+            <div>
+                <img src="image2.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image5.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image11.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image3.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image6.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image12.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image8.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image9.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image10.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image14.png" alt="Image 1">
+            </div>
+            <div>
+                <img src="image13.png" alt="Image 1">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>
